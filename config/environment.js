@@ -7,6 +7,14 @@ module.exports = function(environment) {
     environment,
     rootURL: '/',
     locationType: 'auto',
+    firebase: {
+      apiKey: "AIzaSyBu9ZF_oL6XM5zXJkIONCSyVpc8o3pXlUY",
+      authDomain: "diechevalet-c6288.firebaseapp.com",
+      databaseURL: "https://diechevalet-c6288.firebaseio.com",
+      storageBucket: "diechevalet-c6288.appspot.com",
+    },
+    torii: { sessionServiceName: 'session' },
+
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

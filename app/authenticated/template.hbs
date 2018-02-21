@@ -1,1 +1,9 @@
-{{outlet}}
+<div class="container">
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Welcome back {{session.currentUser.displayName}}</h1>
+      <button type="submit" class="btn btn-primary" {{action 'signOut'}}>Sign out</button>
+    </div>
+  </div>
+  {{outlet}}
+</div>
