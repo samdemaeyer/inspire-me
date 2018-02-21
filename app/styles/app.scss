@@ -1,2 +1,36 @@
+@import "variables";
+@import "typography";
+@import "helpers";
 @import "ember-cli-bootstrap-4/bootstrap";
 @import "ember-power-select";
+@charset "UTF-8";
+@import "bootstrap-overrides/flex";
+@import "bootstrap-overrides/cards";
+@import "bootstrap-overrides/buttons";
+@import "bootstrap-overrides/forms";
+@import "components/forms";
+@import "sign-in";
+
+.ember-application {
+  flex-direction: column;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+.devider-title {
+  border-bottom: 1px solid lighten($gray, 25%);
+  display: flex;
+  justify-content: center;
+  height: 20px;
+  margin-bottom: 20px;
+
+  &::after {
+    content: attr(data-title);
+    height: 40px;
+    line-height: 40px;
+    background: $white;
+    padding: 0 10px;
+    color: $gray;
+  }
+}

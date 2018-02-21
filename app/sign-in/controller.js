@@ -1,6 +1,13 @@
 import Controller from '@ember/controller';
+import { computed } from '@ember/object';
+import { isEmpty } from '@ember/utils';
 
 export default Controller.extend({
+  btnDisabled: computed('email', 'password', function() {
+    const { email, password } = this.getProperties('email', 'password');
+    return isEmpty(email) || isEmpty(password);
+  }),
+
   actions: {
     signIn() {
       const { email, password } = this.getProperties('email', 'password');

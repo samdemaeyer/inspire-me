@@ -1,0 +1,21 @@
+.dotted-bg {
+  background-image: url('/images/dotted-bg.png');
+  background-repeat: no-repeat;
+  background-size: 150%;
+  background-position-x: 170%;
+  background-position-y: center;
+}
+.paining-tools {
+  width: 100%;
+  padding-left: 5em;
+}
+
+.logo-wrapper { text-align: center; }
+.form-title {
+  font-weight: 600;
+  font-size: 1.6rem;
+  padding: 1rem 0;
+}
+p, label, a { font-size: 0.85rem; }
+.btn-primary { margin: 1em 0; }
+form { width: 100%; }

@@ -1,13 +1,30 @@
-<div class="container">
-  <form class="" {{action 'signIn' on='submit'}}>
-    <div class="form-group">
-      <label for="email">Email address</label>
-      {{input type="email" class="form-control" value=email id="email" placeholder="Enter email"}}
+<section class="container">
+  <div class="row h-100">
+    <div class="d-flex col-md-6 dotted-bg align-items-center justify-content-center">
+      <img src="/images/painting-tools.png" alt="paining-tools" class="paining-tools">
     </div>
-    <div class="form-group">
-      <label for="password">Password</label>
-      {{input type="password" class="form-control" value=password id="password" placeholder="Enter password"}}
+    <div class="d-flex col-md-6 align-items-center justify-content-center">
+      <form class="in-form outlined" {{action 'signIn' on='submit'}}>
+        <div class="logo-wrapper">
+          <img src="/images/main-logo.png" alt="main-logo">
+        </div>
+        <h3 class="form-title">Let's get started</h3>
+        {{input type="email" placeholder="Email address" value=email required=true}}
+        {{input type="password" placeholder="Password" value=password required=true}}
+        <div class="d-flex align-items-center">
+          <div class="check-wrapper flex-1">
+            <input type="checkbox" name="remember-me" id="remember-me">
+            <label for="remember-me">Remember me</label>
+          </div>
+          <a href="#">I forgot my password</a>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block btn-lg" disabled={{btnDisabled}}>Sign in</button>
+        <div class="devider-title" data-title="or"></div>
+        <div class="d-flex justify-content-around">
+          <button type="button" class="btn btn-outline-dark"><i class="fa fa-google-plus" aria-hidden="true"></i> Sign in with Google</button>
+          <button type="button" class="btn btn-outline-dark"><i class="fa fa-facebook" aria-hidden="true"></i> Sign in with Facebook</button>
+        </div>
+      </form>
     </div>
-    <button type="submit" class="btn btn-primary">Sign In</button>
-  </form>
-</div>
+  </div>
+</section>
