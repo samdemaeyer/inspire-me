@@ -3,6 +3,7 @@
 module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'inspire-me',
+    podModulePrefix: '',
     environment,
     rootURL: '/',
     locationType: 'auto',
