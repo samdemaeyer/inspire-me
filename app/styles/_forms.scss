@@ -23,8 +23,6 @@
   }
 }
 
-.form-devider { margin: 2rem 0; }
-
 .checkbox-input {
   position: absolute;
   z-index: -1;
@@ -74,3 +72,22 @@
 }
 
 .checkbox-label::before { border-radius: .25rem; }
+
+.price-input-wrapper {
+  position: relative;
+
+  &::before {
+    content: '£';
+    position: absolute;
+    width: 2rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid $bootstrap-input-border;
+    color: $bootstrap-input-color;
+  }
+  .form-control {
+    padding-left: 2.75rem;
+  }
+}
