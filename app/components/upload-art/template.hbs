@@ -1,0 +1,41 @@
+{{#if upload}}
+  <div class="row mb-4">
+    <div class="col">
+      <div class="upload-dropzone">
+        <div class="upload-text">
+          {{upload.title}}
+        </div>
+        <div class="remove-upload">
+          <i class="fa fa-times-circle remove-action" {{action 'removeUpload'}}></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mb-4">
+    <div class="col-sm-5">
+      <div class="upload-preview">
+        <img src="{{upload.base64}}" class="thumb">
+        <div class="remove-upload">
+          <i class="fa fa-times remove-action" {{action 'removeUpload'}}></i>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-7">
+      <div class="form-group">
+        <label for="art-description">Write a brief description of your artwork</label>
+        {{textarea value=upload.description class="form-control" id="art-description" rows="5"}}
+      </div>
+    </div>
+  </div>
+{{else}}
+  <div class="row mb-4">
+    <div class="col">
+      <div class="upload-dropzone" ondrop={{action 'selectImage'}} ondragover={{action 'allowDrop'}}>
+        <label class="upload-text">
+          Add artwork <i class="fa fa-plus-circle"></i>
+          <input type="file" accept="image/*" onchange={{action 'selectImage'}} hidden>
+        </label>
+      </div>
+    </div>
+  </div>
+{{/if}}

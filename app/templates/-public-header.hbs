@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-lg">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        {{#if isSignInPage}}
+          {{link-to 'Sign up' 'sign-up' class='btn btn-outline-primary'}}
+        {{else}}
+          {{link-to 'Sign in' 'sign-in' class='btn btn-outline-primary'}}
+        {{/if}}
+      </li>
+    </ul>
+  </div>
+</nav>

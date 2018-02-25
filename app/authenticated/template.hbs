@@ -1,8 +1,5 @@
-<div class="container">
-  <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-      <h1 class="display-4">Welcome back {{model.firstName}}</h1>
-      <button type="submit" class="btn btn-primary" {{action 'signOut'}}>Sign out</button>
-    </div>
-  </div>
+{{partial 'authenticated-header'}}
+<div class="main-content container">
+  {{outlet}}
 </div>
+{{partial 'authenticated-footer'}}

@@ -9,7 +9,9 @@ const Router = EmberRouter.extend({
 Router.map(function() {
   this.route('sign-up');
   this.route('sign-in');
-  this.route('authenticated', { path: '/' });
+  this.route('authenticated', { path: '/' }, function() {
+    this.route('upload-art');
+  });
 });
 
 export default Router;

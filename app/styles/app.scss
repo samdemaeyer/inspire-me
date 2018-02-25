@@ -1,21 +1,31 @@
+@charset "UTF-8";
 @import "variables";
 @import "typography";
 @import "helpers";
 @import "ember-cli-bootstrap-4/bootstrap";
 @import "ember-power-select";
-@charset "UTF-8";
 @import "bootstrap-overrides/flex";
 @import "bootstrap-overrides/cards";
 @import "bootstrap-overrides/buttons";
 @import "bootstrap-overrides/forms";
+@import "bootstrap-overrides/text";
 @import "components/forms";
 @import "sign-in";
+@import "footers";
+@import "headers";
+@import "upload-art";
 
-.ember-application {
+.ember-application > .ember-view{
   flex-direction: column;
   display: flex;
   min-height: 100vh;
   justify-content: center;
+
+  .main-content {
+    flex: 1 0 auto;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
 }
 
 .devider-title {
@@ -33,4 +43,11 @@
     padding: 0 10px;
     color: $gray;
   }
+}
+
+.upload-dropzone {
+  border: 2px dashed $gray;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }

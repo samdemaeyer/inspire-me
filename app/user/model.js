@@ -1,6 +1,10 @@
-import DS from 'ember-data';
+import Model from 'ember-data/model';
+import attr from 'ember-data/attr';
+import { hasMany } from 'ember-data/relationships';
 
-export default DS.Model.extend({
-  email:     DS.attr('string'),
-  firstName: DS.attr('string')
+export default Model.extend({
+  email:     attr('string'),
+  firstName: attr('string'),
+
+  artUpload: hasMany('art-upload'),
 });

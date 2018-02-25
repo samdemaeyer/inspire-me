@@ -1,0 +1,32 @@
+footer {
+  &.authenticated-footer {
+    background: $black;
+    color: $white;
+    font-size: 0.85rem;
+
+    .container { padding: 2em; }
+
+    .links {
+      list-style: none;
+      padding-left: 0;
+
+      a {
+        color: $white;
+        line-height: 2.5rem;
+      }
+    }
+
+    .devider { border-top: 1px solid $gray-900; }
+    .logo-small { height: 35px; }
+    .copyright-text { margin: 0 2rem 0; }
+  }
+
+  &.public-footer {
+    height: 10em;
+
+    p {
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+  }
+}
