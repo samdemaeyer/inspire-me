@@ -10,7 +10,7 @@
   }
   &.w-80 { width: 80%; }
 }
-form-check-label
+
 .required label:not(.hidden), span.required {
   &::after {
     content: '*';
@@ -25,7 +25,7 @@ label.hidden { opacity: 0; }
 
   .form-check-input { display: none; }
   .form-check-input:checked + .form-check-label::before { border-color: $primary; }
-  .form-check-input:checked + .form-check-label::after {
+  .form-check-input:checked[type='checkbox'] + .form-check-label::after {
     content: '\f00c';
     font-family: 'fontawesome';
     position: absolute;
@@ -38,6 +38,19 @@ label.hidden { opacity: 0; }
     text-align: center;
     line-height: 2rem;
   }
+
+  .form-check-input[type='radio'] + .form-check-label::before { border-radius: 50%; }
+  .form-check-input:checked[type='radio'] + .form-check-label::after {
+    content: '';
+    width: .5rem;
+    height: .5rem;
+    background-color: $primary;
+    left: .25rem;
+    top: .75rem;
+    position: absolute;
+    border-radius: 50%;
+  }
+
 
   .form-check-label {
     position: relative;

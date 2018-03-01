@@ -3,7 +3,6 @@ import { inject as service } from '@ember/service';
 
 export default Component.extend({
   store: service(),
-  tagName: '',
 
   init(...args) {
     this._super(...args);
@@ -15,7 +14,7 @@ export default Component.extend({
       ['Subject 5', 'Subject 6', 'Subject 7', 'Subject 8'],
       ['Subject 9', 'Subject 10', 'Subject 11'],
     ];
-    // this.upload = this.store.createRecord('art-upload', { tags: [], subjects: [] });
+    this.metricUnits = ['cm', 'inches'];
   },
 
   actions: {
@@ -32,7 +31,9 @@ export default Component.extend({
           title: this.get('uploadTitle'),
           user: this.get('currentUser.content'),
           tags: [],
-          subjects: []
+          subjects: [],
+          framedMetricUnit: 'cm',
+          unframedMetricUnit: 'cm',
         });
         this.get('uploads').pushObject(artUpload);
         this.set('upload', artUpload);

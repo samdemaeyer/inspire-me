@@ -8,5 +8,18 @@
       </p>
     </div>
   </div>
-  {{upload-art uploads=uploads}}
+
+  <form {{action 'submitArtwork' on='submit'}}>
+    {{#each uploadLoop}}
+      {{upload-art uploads=uploads}}
+    {{/each}}
+    {{#if uploads.length}}
+      <button
+        type="submit"
+        class="btn btn-primary btn-sm float-right {{if submitArtworkTask.isrunning 'disabled'}}"
+        disabled={{submitArtworkTask.isrunning}}>
+        {{if submitArtworkTask.isRunning 'Submitting' 'Submit artwork'}}
+      </button>
+    {{/if}}
+  </form>
 </div>

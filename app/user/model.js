@@ -6,5 +6,5 @@ export default Model.extend({
   email:     attr('string'),
   firstName: attr('string'),
 
-  artUpload: hasMany('art-upload'),
+  artUploads: hasMany('art-upload'),
 });
