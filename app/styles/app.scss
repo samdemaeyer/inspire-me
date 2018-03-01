@@ -2,11 +2,11 @@
 @import "variables";
 @import "typography";
 @import "helpers";
+@import "pod-styles";
 @import "ember-cli-bootstrap-4/bootstrap";
 @import "ember-power-select";
 @import "overrides/ember-power-select";
 @import "overrides/bootstrap/flex";
-@import "overrides/bootstrap/cards";
 @import "overrides/bootstrap/buttons";
 @import "overrides/bootstrap/badges";
 @import "overrides/bootstrap/forms";
@@ -45,11 +45,4 @@
     padding: 0 10px;
     color: $gray;
   }
-}
-
-.upload-dropzone {
-  border: 2px dashed $gray;
-  justify-content: center;
-  align-items: center;
-  display: flex;
 }

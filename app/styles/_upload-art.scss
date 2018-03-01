@@ -1,89 +1,57 @@
-#upload-art {
-  .upload-dropzone {
-    height: 4rem;
-    margin-top: 1.5rem;
-    position: relative;
+.upload-dropzone {
+  border: 2px dashed $gray;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
 
-    .upload-text {
-      margin-bottom: 0;
-      font-size: 1rem;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      cursor: pointer;
+.upload-preview {
+  position: relative;
 
-      .fa-plus-circle {
-        font-size: 1.3rem;
-        margin-left: 0.3rem;
-      }
-    }
-    .remove-upload {
+  &:hover {
+    &::before {
+      content: "";
+      background: $overlay;
       position: absolute;
-      right: 0;
-      height: 100%;
-      width: 3rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 1.3rem;
-
-      .remove-action {
-        padding: .5rem;
-        cursor: pointer;
-      }
-    }
-  }
-  .upload-preview {
-    position: relative;
-
-    &:hover {
-      &::before {
-        content: "";
-        background: $overlay;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-      }
-      .remove-upload { display: flex; }
-    }
-
-    .thumb { width: 100%; }
-    .remove-upload {
-      display: none;
-      position: absolute;
-      justify-content: center;
-      align-items: center;
-      top: 0;
-      left: 0;
       width: 100%;
       height: 100%;
-
-      .remove-upload-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        color: $white;
-
-        .remove-action {
-          width: 3rem;
-          border: 1px solid $white;
-          border-radius: 50%;
-          height: 3rem;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-size: 1.3rem;
-          margin: 1rem;
-          cursor: pointer;
-        }
-      }
     }
+    .hover-upload { display: flex; }
   }
 
-  .add-tags {
-    .remove-action {
-      margin-left: 0.5rem;
-      cursor: pointer;
+  .thumb { width: 100%; }
+  .hover-upload {
+    display: none;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    .hover-upload-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: $white;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      .hover-action {
+        width: 3rem;
+        border: 1px solid $white;
+        border-radius: 50%;
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.3rem;
+        margin: 1rem;
+        cursor: pointer;
+      }
     }
   }
 }

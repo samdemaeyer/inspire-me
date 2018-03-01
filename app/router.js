@@ -11,6 +11,9 @@ Router.map(function() {
   this.route('sign-in');
   this.route('authenticated', { path: '/' }, function() {
     this.route('upload-art');
+    this.route('my-art', function() {
+      this.route('update', { path: '/update/:upload_id' });
+    });
   });
 });
 
