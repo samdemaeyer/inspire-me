@@ -44,6 +44,9 @@ export default Component.extend({
 
     createTag(e) {
       if (e.keyCode === 13) { // enter
+        if (!this.get('upload.tags')) {
+          this.set('upload.tags', []);
+        }
         this.get('upload.tags').pushObject(this.get('tag'));
         this.set('tag', undefined);
       }
@@ -54,6 +57,9 @@ export default Component.extend({
     },
 
     subjectSelect(subject) {
+      if (!this.get('upload.subjects')) {
+        this.set('upload.subjects', []);
+      }
       if (this.get('upload.subjects').includes(subject)) {
         this.get('upload.subjects').removeObject(subject);
       } else {

@@ -1,0 +1,12 @@
+<div class="row mb-4">
+  <div class="col md-12">
+    <h3 class="text-center">Edit your uploaded art</h3>
+  </div>
+</div>
+
+<form {{action (perform updateArtworkTask) on='submit'}}>
+  {{upload-art upload=model}}
+  <button type="submit" class="btn btn-primary btn-sm float-right" disabled={{updateArtworkTask.isRunning}}>
+    {{if updateArtworkTask.isRunning 'Updating' 'Update artwork'}}
+  </button>
+</form>

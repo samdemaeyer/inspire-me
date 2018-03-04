@@ -10,10 +10,11 @@ Router.map(function() {
   this.route('sign-up');
   this.route('sign-in');
   this.route('authenticated', { path: '/' }, function() {
-    this.route('upload-art');
-    this.route('my-art', function() {
+    this.route('my-atelier', function() {
       this.route('update', { path: '/update/:upload_id' });
+      this.route('upload-art');
     });
+    this.route('account-settings');
   });
 });
 

@@ -14,10 +14,7 @@
       {{upload-art uploads=uploads}}
     {{/each}}
     {{#if uploads.length}}
-      <button
-        type="submit"
-        class="btn btn-primary btn-sm float-right {{if submitArtworkTask.isrunning 'disabled'}}"
-        disabled={{submitArtworkTask.isrunning}}>
+      <button type="submit" class="btn btn-primary btn-sm float-right" disabled={{submitArtworkTask.isRunning}}>
         {{if submitArtworkTask.isRunning 'Submitting' 'Submit artwork'}}
       </button>
     {{/if}}

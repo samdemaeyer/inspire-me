@@ -92,6 +92,7 @@
                       class='form-check-input'
                       type='checkbox'
                       id=(concat elementId '-subject-' groupIndex '-' index)
+                      checked=(contains subject upload.subjects)
                       change=(action 'subjectSelect' subject)}}
                     <label class="form-check-label" for="{{elementId}}-subject-{{groupIndex}}-{{index}}">
                       {{subject}}
