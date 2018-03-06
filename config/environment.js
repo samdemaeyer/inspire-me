@@ -14,6 +14,11 @@ module.exports = function(environment) {
       storageBucket: "diechevalet-c6288.appspot.com",
     },
     torii: { sessionServiceName: 'session' },
+    flashMessageDefaults: {
+      timeout: 3500,
+      extendedTimeout: 500,
+      preventDuplicates: true,
+    },
 
     EmberENV: {
       FEATURES: {

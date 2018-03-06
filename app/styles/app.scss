@@ -11,11 +11,13 @@
 @import "overrides/bootstrap/badges";
 @import "overrides/bootstrap/forms";
 @import "overrides/bootstrap/text";
+@import "overrides/bootstrap/alerts";
 @import "forms";
 @import "sign-in";
 @import "footers";
 @import "headers";
 @import "upload-art";
+@import "account-settings";
 
 .ember-application > .ember-view{
   flex-direction: column;
