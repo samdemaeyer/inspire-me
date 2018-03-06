@@ -9,14 +9,16 @@
     </div>
   </div>
 
-  <form {{action 'submitArtwork' on='submit'}}>
-    {{#each uploadLoop}}
-      {{upload-art uploads=uploads}}
-    {{/each}}
-    {{#if uploads.length}}
-      <button type="submit" class="btn btn-primary btn-sm float-right" disabled={{submitArtworkTask.isRunning}}>
-        {{if submitArtworkTask.isRunning 'Submitting' 'Submit artwork'}}
-      </button>
-    {{/if}}
-  </form>
+  {{#each uploadLoop}}
+    {{upload-art uploads=uploads}}
+  {{/each}}
+  {{#if uploads.length}}
+    <button
+      type="submit"
+      class="btn btn-primary btn-sm float-right"
+      disabled={{submitArtworkTask.isRunning}}
+      {{action 'submitArtwork'}}>
+      {{if submitArtworkTask.isRunning 'Submitting' 'Submit artwork'}}
+    </button>
+  {{/if}}
 </div>

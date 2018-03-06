@@ -1,4 +1,2 @@
-import FirebaseAdapter from 'emberfire/adapters/firebase';
-
-export default FirebaseAdapter.extend({
-});
+import FirebaseFlexAdapter from 'emberfire-utils/adapters/firebase-flex';
+export default FirebaseFlexAdapter.extend();

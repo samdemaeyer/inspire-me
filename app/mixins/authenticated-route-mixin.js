@@ -6,7 +6,7 @@ export default Mixin.create({
     return this.get('session').fetch().then(() => {
       const userProxy = getOwner(this).lookup('service:current-user');
       const userParams = { uid: this.get('session.uid') };
-      return this.store.query('user', userParams).then((users) => userProxy.set('content', users.lastObject));
+      return this.store.queryRecord('user', userParams).then(user => userProxy.set('content', user));
     }).catch((error) => {
       if (error.message === 'No session available') {
         this.transitionTo('sign-in')
