@@ -12,15 +12,6 @@ module('Integration | Component | upload-art', function(hooks) {
 
     await render(hbs`{{upload-art}}`);
 
-    assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      {{#upload-art}}
-        template block text
-      {{/upload-art}}
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.equal(this.element.textContent.trim(), 'Add artwork');
   });
 });
