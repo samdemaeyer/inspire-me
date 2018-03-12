@@ -22,7 +22,13 @@ export default Controller.extend({
 
     signInWithFacebook() {
       const provider = new firebase.auth.FacebookAuthProvider();
-      this.get('firebaseApp').auth().signInWithPopup(provider).then(() => this.transitionToRoute('authenticated'));
+      this.get('firebaseApp').auth().signInWithPopup(provider).then(userData => {
+        const user = this.store.createRecord('user', {
+          id: userData.user.uid,
+          email: userData.user.email,
+        });
+        return user.save().then(() => this.transitionToRoute('authenticated'));
+      })
     },
 
     // signInWithGoogle() {
