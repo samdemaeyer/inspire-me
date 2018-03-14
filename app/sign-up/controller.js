@@ -27,7 +27,7 @@ export default Controller.extend({
           email: userResponse.email,
           firstName
         });
-        return user.save().then(() => this.transitionToRoute('authenticated'));
+        return user.save().then(() => this.transitionToRoute('authenticated.my-atelier'));
       });
     },
   }

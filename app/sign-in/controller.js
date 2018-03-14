@@ -17,7 +17,7 @@ export default Controller.extend({
     signIn() {
       const { email, password } = this.getProperties('email', 'password');
       const params = { provider: 'password', email, password };
-      this.get('session').open('firebase', params).then(() => this.transitionToRoute('authenticated'));
+      this.get('session').open('firebase', params).then(() => this.transitionToRoute('authenticated.my-atelier'));
     },
 
     signInWithFacebook() {
@@ -27,7 +27,7 @@ export default Controller.extend({
           id: userData.user.uid,
           email: userData.user.email,
         });
-        return user.save().then(() => this.transitionToRoute('authenticated'));
+        return user.save().then(() => this.transitionToRoute('authenticated.my-atelier'));
       })
     },
 
