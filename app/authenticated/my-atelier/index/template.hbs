@@ -3,7 +3,7 @@
     <h3 class="text-center">My atelier</h3>
   </div>
 </div>
-<div class="row">
+<div class="row mb-4">
   {{#each model as |upload|}}
     <div class="col mb-3">
       <div class="card text-center">
@@ -19,4 +19,9 @@
       </div>
     </div>
   {{/each}}
+</div>
+<div class="row mb-4">
+  <div class="col-md-12 text-center">
+    {{link-to 'Upload More Art' 'authenticated.my-atelier.upload-art'}}
+  </div>
 </div>
