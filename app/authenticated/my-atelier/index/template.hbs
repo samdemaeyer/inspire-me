@@ -5,19 +5,7 @@
 </div>
 <div class="row mb-4">
   {{#each model as |upload|}}
-    <div class="col mb-3">
-      <div class="card text-center">
-        <div class="card-header">{{upload.title}}</div>
-        <div class="upload-preview">
-          <img class="card-img-bottom" src="{{upload.base64}}" alt="{{upload.title}}">
-          <div class="hover-upload">
-            {{#link-to 'authenticated.my-atelier.update' upload.id class='hover-upload-wrapper'}}
-              <i class="fa fa-pencil hover-action"></i>
-            {{/link-to}}
-          </div>
-        </div>
-      </div>
-    </div>
+    {{upload-card upload=upload}}
   {{/each}}
 </div>
 <div class="row mb-4">

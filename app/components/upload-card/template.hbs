@@ -1,0 +1,13 @@
+<div class="upload-card">
+  <div class="img" style="{{style}}">
+  </div>
+  <div class="body-wrapper">
+    <div class="content">
+      <h4 class="truncate title">{{upload.title}}</h4>
+    </div>
+    <div class="buttons-wrapper">
+      {{link-to 'Update' 'authenticated.my-atelier.update' upload.id class='btn btn-primary btn-sm btn-block'}}
+      <button type="button" class="btn btn-outline-dark btn-sm btn-block" disabled>Remove</button>
+    </div>
+  </div>
+</div>
